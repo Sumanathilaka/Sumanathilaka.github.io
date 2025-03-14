@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Timeline</title>
+    <link rel="stylesheet" href="www/css/timeline.css">
+    
+</head>
+<body>
+<br><br><br>
+    <div class="timeline-container">
+        <div class="timeline"></div>
+        <!-- Years and cards will be added by JavaScript -->
+    </div>
+    
+    <script>
+        // Timeline data
+        const timelineData = [
+            {
+                year: 2022,
+                position: 10,
+                cardPosition: 'top',
+                title: 'Swa bhasha: Message-based singlish to sinhala transliteration',
+                bgColor: 'purple-bg',
+                pdfLink: 'https://arxiv.org/pdf/2404.13350'
+            },
+            {
+                year: 2023,
+                position: 30,
+                cardPosition: 'bottom',
+                title: 'Swa-bhasha: Romanized sinhala to sinhala reverse transliteration using a hybrid approach',
+                bgColor: 'purple-bg',
+                pdfLink: 'https://ieeexplore.ieee.org/abstract/document/10145648'
+            },
+            {
+                year: 2024,
+                position: 50,
+                cardPosition: 'top',
+                title: 'Swa Bhasha 2.0: Addressing Ambiguities in Romanized Sinhala to Native Sinhala Transliteration Using Neural Machine Translation',
+                bgColor: 'gray-bg',
+                pdfLink: 'https://ieeexplore.ieee.org/abstract/document/10499785'
+            },
+            {
+                year: 2025,
+                position: 70,
+                cardPosition: 'bottom',
+                title: 'Romanized Sinhala to Sinhala Reverse Transliteration Using BERT',
+                bgColor: 'gray-bg',
+                pdfLink: 'https://aclanthology.org/2025.indonlp-1.16/'
+            },
+            {
+                year: 2026,
+                position: 90,
+                cardPosition: 'top',
+                title: 'Code mixed Romanized Sinhala to Sinhala Transliteration',
+                bgColor: 'orange-bg',
+                pdfLink: '#pdf2026'
+            }
+        ];
+        
+        const timelineContainer = document.querySelector('.timeline-container');
+        const timelineEl = document.querySelector('.timeline');
+        
+        // Create timeline years and cards
+        timelineData.forEach(item => {
+            // Create year label
+            const yearLabel = document.createElement('div');
+            yearLabel.className = 'year-label';
+            yearLabel.textContent = item.year;
+            yearLabel.style.left = `${item.position}%`;
+            timelineEl.appendChild(yearLabel);
+            
+            // Create info card
+            const infoCard = document.createElement('div');
+            infoCard.className = `info-card ${item.bgColor} ${item.cardPosition}`;
+            infoCard.innerHTML = item.title;
+            infoCard.style.left = `${item.position}%`;
+            infoCard.setAttribute('data-pdf', item.pdfLink);
+            timelineContainer.appendChild(infoCard);
+            
+            // Connect year label and info card
+            const highlightCard = () => {
+                infoCard.style.opacity = '1';
+                infoCard.style.boxShadow = '0 0 15px rgba(255, 255, 255, 0.3)';
+                infoCard.style.transform = item.cardPosition === 'top' 
+                    ? 'translateX(-50%) translateY(-5px)' 
+                    : 'translateX(-50%) translateY(5px)';
+                yearLabel.style.transform = 'translateX(-50%) scale(1.1)';
+            };
+            
+            const unhighlightCard = () => {
+                infoCard.style.opacity = '0.9';
+                infoCard.style.boxShadow = 'none';
+                infoCard.style.transform = 'translateX(-50%)';
+                yearLabel.style.transform = 'translateX(-50%)';
+            };
+            
+            yearLabel.addEventListener('mouseenter', highlightCard);
+            yearLabel.addEventListener('mouseleave', unhighlightCard);
+            
+            infoCard.addEventListener('mouseenter', highlightCard);
+            infoCard.addEventListener('mouseleave', unhighlightCard);
+            
+            yearLabel.addEventListener('click', () => {
+                window.location.href = item.pdfLink;
+            });
+            
+            infoCard.addEventListener('click', () => {
+                window.location.href = item.pdfLink;
+            });
+        });
+    </script>
+</body>
+</html>
