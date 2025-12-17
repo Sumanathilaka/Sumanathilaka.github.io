@@ -63,7 +63,7 @@
 <div class="article">
             <h3>PharmaMap-LLM: Fine-Tuning Large Language Models for Drug-Drug Interaction (DDI) Analysis</h3>
             Kithusshand Raveendran <b>T Sumanathilaka</b>, Pavinithan Retnakumar, Yathukulan Sivapiragasam, Kanagasabai Thiruthanigesan
-            <p class="venue">2025 | 7th INTERNATIONAL CONFERENCEON ADVANCEMENTS IN COMPUTING 2025 | Dec 2025</p>
+            <p class="venue">2025 | 7th International Conference On Advancements In Computing 2025 | Dec 2025</p>
             <p class="abstract" style="text-align: justify" > 
             Adverse Drug-Drug Interactions (DDIs) pose a critical challenge under polypharmacy. Traditional methods, such as rule-based systems and classical machine learning approaches, struggle with scalability and the detection of novel interactions in free-text biomedical literature. To address these limitations, the proposed framework PHARMAMAP–LLM introduces a DDI extraction system that instruction-tunes a biomedical large language model (LLM) via QLoRA for memory-efficient domain adaptation on a single RTX 3090 GPU. The system employs an agentic flow comprising a Predictor (MedLLaMA-3-8B), two Validators, and a clinician-facing Risk Agent, enabling predictions, confidence scores, and rationales to be cross-checked for enhanced explainability. Training utilizes the DDIExtraction 2013 corpus and an instruction dataset derived from approximately 20,000 DrugBank pairs, with entity normalization handled using a SciBERT tokenizer. Detailed hardware specifications and training parameters—including learning rate, LoRA ranks, and batch/sequence sizes—are reported to ensure reproducibility. On the DDIExtraction 2013 benchmark, PHARMAMAP–LLM achieves an F1-score of 0.87, Precision of 0.89, and Recall of 0.85, outperforming prior text-mining baselines. A human evaluation by a clinical pharmacologist across 200 cases rated 83% of responses as accurate or better (mean 4.2/5), while an LLM-as-judge audit using GPT-4 on 2,000 outputs found 92.3% correctness. When compared with GPT-4o on 500 shared prompts, performance differences were statistically insignificant according to McNemar’s χ² test (continuity-corrected, p ≈ 0.40). Error analysis revealed under-detection of pharmacodynamic interaction patterns and missing dose/time qualifiers, which informed mitigation strategies including PD-focused exemplars, retrieval of threshold cues, and calibrated confidence scoring. Overall, the proposed system delivers an explainable, reproducible, and deployment-friendly DDI tool designed to enhance clinical decision support. <div class="links"> 
             <a href="" target="_blank">Paper</a> 
@@ -88,7 +88,7 @@
             <p class="abstract" style="text-align: justify" > Deep Learning and, more recently, Large Language Models(LLMs) have revolutionised the field of artificial intelligence and have been successfully employed in many disciplines, capturing widespread attention and enthusiasm.Many previous studies have established that domain-specific Deep Learning models competitively perform with the general-purpose LLMs. However, a suitable prompt which provides direct instructions and background information is expected to yield improved results.
             The present study, which focuses on Large Language Models for Toponym Resolution, shows that effective Prompt Engineering techniques without fine-tuning or pre-training approaches enable LLMs to surpass Deep Learning models, which is contrary to the initial expectations. After a comparison of open-source and proprietary LLMs and different prompt engineering techniques, the GPT-4o model performs best compared to the other open-source LLMs</p>
             <div class="links"> 
-            <a href="#" target="_blank">Paper</a> 
+            <a href="https://acl-bg.org/proceedings/2025/RANLP%202025/pdf/2025.ranlp-1.11.pdf" target="_blank">Paper</a> 
             </div> 
         </div>
 
@@ -99,7 +99,7 @@
             <p class="abstract" style="text-align: justify" > This paper introduces the first Transliteration disambiguation (TD) dataset for Romanized Sinhala, informally known as Singlish, developed to address the challenge of transliteration ambiguity in backwards transliteration tasks. The dataset covers 22 ambiguous Romanized Sinhala words, each mapping to two distinct Sinhala meanings, and provides 30 Romanized sentences per word: ten for each meaning individually and ten containing both meanings in context. Sentences were initially collected through web scraping and later post-processed using the Claude language model, which offers strong support for Sinhala, alongside a rule-based Romanization process to ensure linguistic quality and consistency. To demonstrate its applicability, the dataset was used to evaluate four existing back-transliteration systems, highlighting their performance in resolving context-sensitive ambiguities. Baseline evaluations confirm the dataset’s effectiveness in assessing transliteration systems’ ability to handle transliteration ambiguity, offering a valuable resource for advancing TD and transliteration research for Sinhala. 
             </p>
             <div class="links"> 
-            <a href="#" target="_blank">Paper</a> 
+            <a href="https://acl-bg.org/proceedings/2025/RANLP%202025/pdf/2025.ranlp-1.107.pdf" target="_blank">Paper</a> 
             </div> 
         </div>
 
@@ -109,7 +109,7 @@
             <p class="venue">2025 Recent Advances in Natural Language Processing (RANLP) | Sep 25</p>
             <p class="abstract" style="text-align: justify" >The growth of mobile financial transactions presents new challenges for fraud detection, where traditional and ML methods often miss emerging patterns. While Large Language Models (LLMs) offer advanced language understanding, they are typically too resource-intensive for mobile deployment and raise privacy concerns due to cloud reliance. This paper proposes a lightweight, privacy-preserving approach by fine-tuning and quantizing compact LLMs for on-device fraud detection from textual data. Models were optimized using Open Neural Network Exchange (ONNX) conversion and quantization to ensure efficiency. The fine-tuned quantized Llama-160M-Chat-v1 (bnb4) achieved 99.47% accuracy with a 168MB footprint, while fine-tuned quantized Qwen1.5-0.5B-Chat (bnb4) reached 99.50% accuracy at 797MB. These results demonstrate that optimized LLMs can deliver accurate, real-time fraud detection on mobile devices without compromising user privacy.
              <div class="links"> 
-                <a href="#" target="_blank">Paper</a> 
+                <a href="https://acl-bg.org/proceedings/2025/RANLP%202025/pdf/2025.ranlp-1.126.pdf" target="_blank">Paper</a> 
             </div> 
         </div>
 
@@ -119,7 +119,7 @@
             <p class="venue">2025 Recent Advances in Natural Language Processing (RANLP) | Sep 25</p>
             <p class="abstract" style="text-align: justify" >Dyslexia in adults remains an under-researched and under-served area, particularly in non-English-speaking contexts, despite its significant impact on personal and professional lives. This work addresses that gap by focusing on Sinhala, a low-resource language with limited tools for linguistic accessibility. We present an assistive system explicitly designed for Sinhala-speaking adults with dyslexia. The system integrates Whisper for speech-to-text conversion, SinBERT, an open-sourced fine-tuned BERT model trained for Sinhala to identify common dyslexic errors, and a combined mT5 and Mistral-based model to generate corrected text. Finally, the output is converted back to speech using gTTS, creating a complete multimodal feedback loop. Despite the challenges posed by limited Sinhala-language datasets, the system achieves 0.66 transcription accuracy and 0.7 correction accuracy with 0.65 overall system accuracy. These results demonstrate both the feasibility and effectiveness of the approach. Ultimately, this work highlights the importance of inclusive Natural Language Processing (NLP) technologies in underrepresented languages and showcases a practical step toward improving accessibility for adult dyslexic users. </p>
             <div class="links"> 
-                <a href="#" target="_blank">Paper</a> 
+                <a href="https://www.arxiv.org/abs/2510.04750" target="_blank">Paper</a> 
             </div> 
         </div>
 
@@ -131,7 +131,7 @@
 classification accuracy, low computational overhead, and high inference speed, making the system well-suited for resource-limited edge devices. These contributions provide a scalable foundation for practical SLR applications and highlight future enhancements
 in multimodal fusion and on-device language processing.
             <div class="links"> 
-                <a href="#" target="_blank">Paper</a> 
+                <a href="https://www.sciencedirect.com/science/article/pii/S1877050925022586" target="_blank">Paper</a> 
             </div> 
         </div>
 
@@ -519,14 +519,34 @@ outing suggestions by combining NLP, advanced recommendation algorithms, and LLM
             <h3>Sinhala Transliteration Evaluation Dataset</h3>
             <p class="abstract" style="text-align: justify">This Test dataset has been created and augmented specifically for the INdoNLP Shared Task 2025. Please note that some data records are a combination of existing datasets that are publicly available for the respective languages. The augmentation process involved generating new data samples based on these existing resources while ensuring data diversity and relevance to the task.</p>
             <div class="links">
-            <a href="https://github.com/IndoNLP-Workshop/IndoNLP-2025-Shared-Task/" target="_blank">Dataset 1</a>
+            <a href="https://github.com/IndoNLP-Workshop/IndoNLP-2025-Shared-Task/" target="_blank">Dataset </a>
+           
+              </div>
+        </div>
+
+         <div class="article">
+            <h3>Sinhala Transliteration Augmented Dataset (7.24M Records)</h3>
+            <p class="abstract" style="text-align: justify">The Augmented Sinhala to Romanized Sinhala Dataset provides paired examples of Sinhala text and their corresponding romanized transliterations. This dataset aims to facilitate research in Sinhala language processing, particularly for applications that require romanized representations of Sinhala text.</p>
+            <div class="links">
+            <a href="https://huggingface.co/datasets/deshanksuman/Augmented_SinhalatoRomanizedSinhala_Dataset/" target="_blank">Dataset </a>
+           
+              </div>
+        </div>
+
+        </div>
+
+         <div class="article">
+            <h3>Romanized Sinhala Transliteration Disambiguation Dataset</h3>
+            <p class="abstract" style="text-align: justify">This paper introduces the first Transliteration disambiguation (TD) dataset for Romanized Sinhala, informally known as Singlish, developed to address the challenge of transliteration ambiguity in backwards transliteration tasks.The dataset covers 22 ambiguous Romanized Sinhala words, each mapping to two distinct Sinhala meanings, and provides 30 Romanized sentences per word: ten for each meaning individually and ten containing both meanings in context. </p>
+            <div class="links">
+            <a href="https://github.com/Sameera2001Perera/Romanized-Sinhala-Transliteration-Disambiguation-Dataset" target="_blank">Dataset </a>
            
               </div>
         </div>
 
     </div>
 
-     <h2>Swa-bhasha transliterations</h2>
+     <h2>Swa-bhasha Transliterations</h2>
 
    <iframe src="timeline.html" style="width: 100%;height: 450px; border: none; overflow: hidden;"></iframe>
    
@@ -534,7 +554,8 @@ outing suggestions by combining NLP, advanced recommendation algorithms, and LLM
    <h2>Peer Review Activities</h2>
 
    <ul>
-  <li> Reviewer and Program committee member for <a href="https://indonlp-workshop.github.io/IndoNLP-Workshop/">The First Workshop on Natural Language Processing for Indo-Aryan and Dravidian Languages (IndoNLP 2025) </a></li>
+   <li> Reviewer and Program committee member for <a href="https://indonlp-workshop.github.io/IndoNLP-Workshop/">The First Workshop on Natural Language Processing for Indo-Aryan and Dravidian Languages (IndoNLP 2025) at COLING 2025</a></li>
+   <li> Reviewer and Program committee member for <a href="https://www.clarin.eu/event/2025/clarin-workshop-ranlp-2025-first-workshop-natural-language-processing-and-language"> The first Workshop on Natural Language Processing and Language Models for Digital Humanities (LM4DH 2025) @ RANLP 2025 </a></li>
    <li> Reviewer for Peer J Computer Science Journal</li>
    <li> Reviewer for The 40th Annual AAAI Conference on Artificial Intelligence</li>   
    <li> Reviewer for Recent Advances in Natural Language Processing (RANLP 2025)</li>
@@ -543,7 +564,7 @@ outing suggestions by combining NLP, advanced recommendation algorithms, and LLM
    <li> Reviewer for IIT Conclave 2024 </li>
    <li> Reviewer for The Thirteenth International Conference on Human-Agent Interaction (HAI 2025). </li>
    <li> Reviewer for EthicalLLMs 2025 workshop colocated with RANLP 2025 </li>
-   <li> Reviewer for The first Workshop on Natural Language Processing and Language Models for Digital Humanities (LM4DH 2025) </li>
+   
    
 
    </ul>
